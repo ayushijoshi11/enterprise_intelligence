@@ -1,0 +1,29 @@
+# ── Enterprise Risk Intelligence Copilot (Logistics Edition) ─────────────
+# Core app + data
+streamlit>=1.36
+pandas>=2.1
+numpy>=1.26
+openpyxl>=3.1           # Excel read/write engine for pandas
+
+# EDA / visualisation
+matplotlib>=3.8
+seaborn>=0.13
+scipy>=1.11             # z-score / stats helpers used in anomaly detection
+
+# NLP (Agent 1)
+spacy>=3.7
+# After install run:  python -m spacy download en_core_web_sm
+
+# Retrieval / RAG (Agent 2)
+chromadb>=0.5
+langchain>=0.2
+langchain-community>=0.2
+
+# Local LLM + embeddings (optional — system degrades gracefully if absent)
+# Install Ollama separately from https://ollama.com then:
+#   ollama pull nomic-embed-text
+#   ollama pull llama3.1
+ollama>=0.3
+
+# Testing
+pytest>=8.0
