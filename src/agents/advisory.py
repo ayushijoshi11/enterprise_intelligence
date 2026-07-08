@@ -38,7 +38,7 @@ class AdvisoryBrief:
     immediate_actions: list[str] = field(default_factory=list)
     long_term_strategies: list[str] = field(default_factory=list)
     framework_basis: list[str] = field(default_factory=list)
-    generated_by: str = "template"  # or "ollama"
+    generated_by: str = "Ayushi Joshi"  # or "ollama"
 
     def to_markdown(self) -> str:
         def bullets(items: list[str]) -> str:

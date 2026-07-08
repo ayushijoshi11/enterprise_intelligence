@@ -51,6 +51,23 @@ class DiagnosisResult:
 
 def _load_spacy():
     try:
+        import importlib.util
+        import importlib.metadata
+        import subprocess
+        import sys
+
+        if importlib.util.find_spec("spacy") is None:
+            raise ImportError("spaCy package not installed")
+
+        proc = subprocess.run(
+            [sys.executable, "-c", f"import spacy; spacy.load('{SPACY_MODEL}')"],
+            capture_output=True,
+            text=True,
+            timeout=25,
+        )
+        if proc.returncode != 0:
+            raise RuntimeError(proc.stderr.strip() or proc.stdout.strip())
+
         import spacy
         return spacy.load(SPACY_MODEL)
     except Exception as exc:
