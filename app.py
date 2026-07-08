@@ -231,7 +231,7 @@ def main():
         "<div style='padding:22px; border-radius:22px; background:rgba(191,219,254,0.95); border:1px solid rgba(148,163,184,0.25);'>"
         "<h4 style='margin:0; color:#0f172a;'>Routes</h4>"
         f"<p style='margin:8px 0 0; font-size:2.3rem; font-weight:700; color:#0f172a;'>{route_count}</p>"
-        "</div>", unsafe_allow_htm l=True)
+        "</div>", unsafe_allow_html=True)
 
     tabs = st.tabs([" Overview ", " EDA ", " Anomalies ", " Diagnosis ", " Risk Matrix ", " Advisory "])
 
