@@ -19,6 +19,9 @@ frameworks (ISO 31000, supply-chain resilience doctrine).
 > you always get a complete result. Install them for production-grade semantics.
 
 ---
+## DEMO LINK
+
+https://enterprise-intelligence.streamlit.app/
 
 ## Quick start
 
